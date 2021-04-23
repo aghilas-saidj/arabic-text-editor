@@ -1,0 +1,127 @@
+<html><head>
+  <title>Blank Page</title>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./all.css?t=1618246671256">
+ <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#fafafa">
+  <meta charset="utf-8">
+  <meta author="Blank Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blank Page is a simple text editor designed for creative writing.">
+ </head>
+<body class="inverted undefined empty" lang="en">
+  <input type="file" name="open" accept="text/plain" id="open">
+  <div id="app">
+    
+  <header id="empty">
+    <div id="controls" class="controls">
+      <!--
+      <div id="configure" class="configure header-icon" aria-label="White on Black" title="Switch theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+      <path d="M29.181 19.070c-1.679-2.908-0.669-6.634 2.255-8.328l-3.145-5.447c-0.898 0.527-1.943 0.829-3.058 0.829-3.361 0-6.085-2.742-6.085-6.125h-6.289c0.008 1.044-0.252 2.103-0.811 3.070-1.679 2.908-5.411 3.897-8.339 2.211l-3.144 5.447c0.905 0.515 1.689 1.268 2.246 2.234 1.676 2.903 0.672 6.623-2.241 8.319l3.145 5.447c0.895-0.522 1.935-0.82 3.044-0.82 3.35 0 6.067 2.725 6.084 6.092h6.289c-0.003-1.034 0.259-2.080 0.811-3.038 1.676-2.903 5.399-3.894 8.325-2.219l3.145-5.447c-0.899-0.515-1.678-1.266-2.232-2.226zM16 22.479c-3.578 0-6.479-2.901-6.479-6.479s2.901-6.479 6.479-6.479c3.578 0 6.479 2.901 6.479 6.479s-2.901 6.479-6.479 6.479z"></path></svg>
+    </div> -->
+      <div id="humanized" class="humanized">اكتب 250 كلمة في 10 دقائق</div>
+    <div class="dropdown wordGoal">
+      <span class="caret" data-type="pageWordGoal">كلمة 250</span>
+    <div id="goalSelect" class="select" style ="display: none";><div class="select-options"><div class="select-title">Word Goal</div><div class="select-option" value="0" type="pageWordGoal">بدون هدف</div><div class="select-option" value="250" type="pageWordGoal">كلمة 250</div><div class="select-option" value="500" type="pageWordGoal"> كلمة 500</div><div class="select-option" value="750" type="pageWordGoal">كلمة  750</div><div class="select-option" value="null" type="pageWordGoal">التخصيص</div></div></div></div><div class="dropdown timeLimit">
+      <span class="caret" data-type="pageTimeLimit">دقائق< 10 </span>
+    <div id="timeSelect" class="select" style="display: none;"><div class="select-options"><div class="select-title">Time Limit</div><div class="select-option" value="0" type="pageTimeLimit">No time limit</div><div class="select-option" value="600000" type="pageTimeLimit">10 min</div><div class="select-option" value="900000" type="pageTimeLimit">دقائق<  15/div><div class="select-option" value="1800000" type="pageTimeLimit">دقائق< 30/div><div class="select-option" value="null" type="pageTimeLimit">Custom...</div></div></div></div></div>
+  <div class="page-title"><span class="loading"></span><a href="#"></a></div></header>
+  <header id="finished" class="hide">
+    <div id="actions" class="actions controls">
+
+        <div class="action clear standalone-only" data-action="restart">
+          <span lang="en">حذف</span>
+        </div>
+
+        <div class="action copy standalone-only" data-action="copy">
+          <span lang="en">نسخ</span>
+        </div>
+
+        <div class="action save standalone-only" id="saveTo" data-action="share">
+          <span lang="en">شارك</span>
+      </div>
+
+        <div id="submit" class="submit button course-only">
+          <span lang="en">إرسال نص</span>
+        </div>
+        <div class="action tryagain course-only" data-action="restart">
+          <span lang="en">أعد المحاولة</span>
+        </div>
+    </div>
+  <div class="page-title"><span class="loading"></span><a href="#"></a></div></header>
+<div class="header-icons hide">
+    <div id="language" data-action="translate" data-state="en" class="language header-icon" aria-label="Toggle English/Spanish" title="Language">
+      <span lang="en">EN</span>
+      /
+      <span lang="es">ES</span>
+    </div>
+    <div id="markdown" data-action="markdown" class="markdown header-icon" aria-label="Preview" title="Preview">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+    </div>
+    <div id="about" data-action="about" class="about header-icon" aria-label="About" title="About">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+    </div>
+    <div id="contrast" class="contrast header-icon" aria-label="White on Black" title="Switch theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"></path></svg>
+    </div>
+    <div id="fullscreen" class="fullscreen header-icon" aria-label="Full screen" title="Full screen">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" class="enter-fullscreen"><path d="M21.8 4h4.96c.68 0 1.24.56 1.24 1.24v4.97a1.24 1.24 0 1 1-2.48 0V8.24l-6.16 6.15a1.24 1.24 0 1 1-1.75-1.75l6.15-6.16H21.8a1.24 1.24 0 1 1 0-2.48zm-9.16 13.6a1.24 1.24 0 0 1 2.02.4c.2.47.1 1-.26 1.36l-6.16 6.16h1.97a1.24 1.24 0 1 1 0 2.48H5.24C4.56 28 4 27.44 4 26.76v-4.97a1.24 1.24 0 1 1 2.48 0v1.97l6.16-6.16z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-4 -2 28 28" class="exit-fullscreen"><path d="M1.22 24c.33 0 .64-.13.87-.36l6.05-6.05v1.93a1.22 1.22 0 0 0 2.44 0v-4.88c0-.68-.54-1.22-1.22-1.22H4.48a1.22 1.22 0 1 0 0 2.44h1.94L.36 21.92A1.22 1.22 0 0 0 1.22 24zm13.03-13.03h4.88a1.22 1.22 0 1 0 0-2.44H17.2l6.06-6.06A1.22 1.22 0 1 0 21.53.75L15.47 6.8V4.87a1.22 1.22 0 1 0-2.44 0v4.88c0 .68.54 1.22 1.22 1.22z"></path></svg>
+    </div>
+  </div>
+  <div id="configure" data-action="builder" class="configure header-icon" aria-label="Configure" title="Configure">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></svg>
+  </div>
+  <div id="counter" class="pill counter"><span class="word-count">0 word</span><span class="wpm-count">0 wpm</span></div>
+  <div id="pageAuthorName" class="pill"></div>
+  <div id="prompts" class="pill when-empty hidden"><span>Press <div class="metaKey">Ctrl + </div>I for inspiration</span></div>
+  <div id="progress" class="progress-bars"><div class="progress-bar wordGoal" style="transform: translate(-100%);"></div><div class="progress-bar timeLimit" style="transform: translate(-100%);"></div></div>
+  <div id="flash" class="flash hidden"><span>You've reached 250 words!</span></div>
+  <textarea id="sheet" class="sheet" tabindex="0" spellcheck="true" placeholder="اكتب الآن."></textarea>
+  <div class="skeleton">
+    <div class="container">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div id="aboutScreen" class="screen" data-action="closeLandingScreen" data-trigger="click">
+      <div class="container header-margin screen-content">
+
+        <span lang="ar">
+
+          <p>  هو محرر نصوص بسيط مصمم للكتابة الإبداعية.  Blank Page</p>
+
+          <p>
+            كل كتاباتك خاصة تمامًا ولا يتم تخزين أي شيء على خادم على الإطلاق ، لذا تأكد من حفظ النص في مكان آمن عند الانتهاء.
+          </p>
+
+          <p>
+            يمكنك تكوين صفحتك عن طريق وضع قيود مثل هدف الكلمات والحد الزمني الذي سيتحدى إبداعك ويعززه.
+          </p>
+
+          <p>ماذا تنتظر الأن؟</p>
+
+        </span>
+      </div>
+        <footer>
+          <div class="footer-action" data-action="closeLandingScreen" data-trigger="click">
+            <span lang="ar">ابدأ الكتابة</span>
+          </div>
+        </footer>
+    </div>
+  </div>
+
+  <div id="preview" class="preview hidden"></div>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+  <script src="./all.js?t=1618246671256"></script></body></html>
